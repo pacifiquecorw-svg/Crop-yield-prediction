@@ -10,8 +10,7 @@ import pickle
 import numpy as np
 import pandas as pd
 
-
-load_model = pickle.load(open(r'C:\Users\MIND-HACKER\Documents\Jupyter\DEPLOYMENT\Crop_Yield_Model.sav','rb'))
+load_model = pickle.load(open('Crop_Yield_Model.sav','rb'))
 
 def crop_yeild_prediction(test_data):
     
