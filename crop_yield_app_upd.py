@@ -2,9 +2,14 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
+import os
 
 # ================= LOAD MODEL =================
-load_model = pickle.load(open('Crop_Yield_Model.sav', 'rb'))
+
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "Crop_Yield_Model.sav")
+
+with open(MODEL_PATH, "rb") as file:
+    load_model = pickle.load(file)
 
 # ================= ENCODING MAPS =================
 region_map = {
